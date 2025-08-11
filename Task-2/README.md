@@ -1,7 +1,7 @@
 # 🏏 IPL Cricket Database – Task 2: Data Insertion and Handling NULLs
 
 ## 📌 Overview
-This is **Task 2** of the SQL Developer Internship, focusing on **data manipulation** in the IPL Cricket Database.  
+This is **Task 2** focusing on **data manipulation** in the IPL Cricket Database.  
 The task covers inserting new records, updating existing ones, deleting unwanted rows, and handling `NULL` values where data is missing.
 
 ---
