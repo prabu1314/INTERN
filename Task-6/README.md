@@ -26,7 +26,6 @@ The task demonstrates how to use scalar subqueries, correlated subqueries, and s
 ## 🛠 Example Operations
 
 ### Subquery in WHERE (Scalar Subquery)
-```sql
 -- Players with above-average runs
 SELECT PLAYER_NAME
 FROM PLAYER
@@ -41,7 +40,6 @@ WHERE PLAYER_ID IN (
 ```
 ```
 ###  Correlated Subquery with EXISTS
-```sql
 -- Players who have scored at least one fifty
 SELECT PLAYER_NAME
 FROM PLAYER P
