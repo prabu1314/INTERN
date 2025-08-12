@@ -24,31 +24,14 @@ The task demonstrates how to use `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, and `F
 
 ## 🛠 Example Operations
 
-### 1️⃣ INNER JOIN
+###  INNER JOIN
 ```sql
 -- Players with their team names
 SELECT P.PLAYER_NAME, T.TEAM_NAME
 FROM PLAYER P
 INNER JOIN TEAM T ON P.TEAM_ID = T.TEAM_ID;
 ```
-
-### 2️⃣ LEFT JOIN
-```sql
--- All players and their scores (include players without scores)
-SELECT P.PLAYER_NAME, S.RUNS, S.WICKETS, S.CATCHES
-FROM PLAYER P
-LEFT JOIN SCORE S ON P.PLAYER_ID = S.PLAYER_ID;
-```
-
-### 3️⃣ RIGHT JOIN
-```sql
--- All scores and the corresponding player names
-SELECT S.SCORE_ID, P.PLAYER_NAME, S.RUNS, S.WICKETS
-FROM PLAYER P
-RIGHT JOIN SCORE S ON P.PLAYER_ID = S.PLAYER_ID;
-```
-
-### 4️⃣ FULL OUTER JOIN (Oracle Method)
+### FULL OUTER JOIN (Oracle Method)
 ```sql
 -- All players and all scores
 SELECT P.PLAYER_NAME, S.RUNS, S.WICKETS
@@ -59,10 +42,5 @@ SELECT P.PLAYER_NAME, S.RUNS, S.WICKETS
 FROM PLAYER P
 RIGHT JOIN SCORE S ON P.PLAYER_ID = S.PLAYER_ID;
 ```
-
----
-
-## 📷 Screenshots
-*(Add relevant screenshots of join query outputs here)*  
 
 ---
