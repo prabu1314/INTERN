@@ -1,34 +1,42 @@
-# Let's create the README.md file for Task 4
-readme_content = """# 🏏 IPL Cricket Database – Task 4: Aggregate Functions & Grouping
+# 🏏 IPL Cricket Database – Task 4: Aggregate Functions and Grouping
 
 ## 📌 Overview
-This is **Task 4** of the IPL Cricket Database project, focusing on **aggregate functions** and **grouping** to summarize and analyze match data.  
-We apply functions like `SUM`, `COUNT`, and `AVG` along with `GROUP BY` and `HAVING` clauses.
+This is **Task 4** focusing on summarizing and analyzing match data in the IPL Cricket Database.  
+The task demonstrates how to use aggregate functions like `SUM`, `COUNT`, and `AVG` along with `GROUP BY` and `HAVING` clauses to categorize and filter aggregated results.
 
 ---
 
 ## 🎯 Objective
-- Use aggregate functions to summarize numeric data.
-- Group results based on teams, players, or matches.
-- Apply filters on aggregated results using `HAVING`.
-- Gain insights from the stored cricket match data.
+- Apply aggregate functions to numeric columns  
+- Use `GROUP BY` to group results by team, player, or match  
+- Filter aggregated data using `HAVING`  
+- Summarize performance statistics for players and teams  
 
 ---
 
 ## 🗂 Topics Covered
-1. **SUM** – Total runs, wickets, catches.
-2. **COUNT** – Number of matches played by teams.
-3. **AVG** – Average performance per player or team.
-4. **GROUP BY** – Categorizing data by player, team, or match.
-5. **HAVING** – Filtering aggregated results.
+1. **SUM()** – Adding numeric values (e.g., total runs, wickets)  
+2. **COUNT()** – Counting records in a group  
+3. **AVG()** – Calculating average values  
+4. **GROUP BY** – Grouping data by one or more columns  
+5. **HAVING** – Filtering grouped results  
 
 ---
 
-## 🛠 Example Queries
+## 🛠 Example Operations
 
-### 1️⃣ Total Runs Scored by Each Player
+### SUM Example
 ```sql
-SELECT P.PLAYER_NAME, SUM(S.RUNS) AS TOTAL_RUNS
-FROM SCORE S
-JOIN PLAYER P ON S.PLAYER_ID = P.PLAYER_ID
-GROUP BY P.PLAYER_NAME;
+-- Total runs scored by each player
+SELECT PLAYER_ID, SUM(RUNS) AS Total_Runs
+FROM SCORE
+GROUP BY PLAYER_ID;
+```
+
+### AVG Example
+```sql
+-- Average runs scored per player
+SELECT PLAYER_ID, AVG(RUNS) AS Avg_Runs
+FROM SCORE
+GROUP BY PLAYER_ID;
+```
