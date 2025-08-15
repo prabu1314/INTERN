@@ -17,14 +17,7 @@ Since the Oracle SQL environment did not provide the `CREATE VIEW` privilege, th
 1. **Complex SELECT for views** – Multi-table joins, aggregation, and grouping  
 2. **Abstraction & Security** – Hiding sensitive columns while exposing public data  
 3. **Simulating Views** – Running queries directly without creating persistent views
-
----
-
-## ⚠️ Privilege Limitation
-The `CREATE VIEW` command could not be executed due to **ORA-01031: insufficient privileges**.  
-For demonstration, the queries below show the intended logic of the views and can be run directly.
-
----
+--- 
 
 ## 🛠 Example Queries
 
